@@ -1,0 +1,131 @@
+# This configuration uses Mod1 and Mod3. Make sure they are mapped properly using xev(1)
+# and xmodmap(1). Usually, Mod1 is Alt (Alt_L) and Mod3 is Windows (Super_L)
+
+# Tell i3 about your preferred terminal. You can refer to this as $terminal
+# later. It is recommended to set this option to allow i3 to open a terminal
+# containing the introduction on first start.
+terminal /usr/bin/xterm
+
+# ISO 10646 = Unicode
+font -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+
+# Use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# Fullscreen (Mod1+f)
+bind Mod1+41 f
+
+# Stacking (Mod1+h)
+bind Mod1+43 s
+
+# Default (Mod1+e)
+bind Mod1+26 d
+
+# Toggle tiling/floating of the current window (Mod1+Shift+Space)
+bind Mod1+Shift+65 t
+
+# Go into the tiling layer / floating layer, depending on whether
+# the current window is tiling / floating (Mod1+t)
+bind Mod1+28 focus ft
+
+# Focus (Mod1+j/k/l/;)
+#bind Mod1+44 h
+#bind Mod1+45 j
+bind Mod1+23 j
+bind Mod1+Shift+23 k
+#bind Mod1+23 k
+#bind Mod1+23 l
+
+# Focus Container (Mod3+j/k/l/;)
+bind Mod3+113 wch
+bind Mod3+116 wcj
+bind Mod3+111 wck
+bind Mod3+114 wcl
+
+# Snap (Mod1+Control+j/k/l/;)
+bind Mod1+Control+113 sh
+bind Mod1+Control+116 sj
+bind Mod1+Control+111 sk
+bind Mod1+Control+114 sl
+
+# Move (Mod1+Shift+j/k/l/;)
+bind Mod1+Shift+113 mh
+bind Mod1+Shift+116 mj
+bind Mod1+Shift+111 mk
+bind Mod1+Shift+114 ml
+
+# Move Container (Mod3+Shift+j/k/l/;)
+bind Mod3+Shift+113 wcmh
+bind Mod3+Shift+116 wcmj
+bind Mod3+Shift+111 wcmk
+bind Mod3+Shift+114 wcml
+
+# Workspaces (Mod1+1/2/…)
+bind Mod1+67 1
+bind Mod1+68 2
+bind Mod1+69 3
+bind Mod1+70 4
+bind Mod1+71 5
+bind Mod1+72 6
+bind Mod1+73 7
+bind Mod1+74 8
+bind Mod1+75 9
+bind Mod1+76 10
+
+# Move to Workspaces
+bind Mod1+Shift+67 m1
+bind Mod1+Shift+68 m2
+bind Mod1+Shift+69 m3
+bind Mod1+Shift+70 m4
+bind Mod1+Shift+71 m5
+bind Mod1+Shift+72 m6
+bind Mod1+Shift+73 m7
+bind Mod1+Shift+74 m8
+bind Mod1+Shift+75 m9
+bind Mod1+Shift+76 m10
+
+# Mod1+Shift+Enter starts a new terminal
+bind Mod1+Shift+36 exec xterm
+bind Mod1+Shift+56 exec firefox &>/dev/null
+bind Mod1+Shift+25 exec wicd-client -n &>/dev/null
+bind Mod1+Shift+33 exec pidgin
+bind Mod1+Shift+28 exec transmission
+bind Mod1+Shift+55 exec xterm -e alsamixer
+
+# Mod1+Shift+c kills the current client
+bind Mod1+Shift+54 kill
+
+# Mod1+v starts dmenu and launches the selected application
+# for now, we don’t have an own launcher
+bind Mod1+55 exec /home/daniel/bin/menu_run -b -i -c -l 10
+
+# Mod1+Shift+q exits i3
+bind Mod1+Shift+24 exit
+
+# Mod1+Shift+r restarts i3 inplace
+bind Mod1+Shift+27 restart
+
+#exec i3status -c ~/.i3/i3status.conf|dzen2 -fg white -bg black -fn Terminus:size=12 -ta r -y -1 -x 100 &
+#exec i3status -c ~/.i3/i3status.conf|dzen2 -ta r -tw 1280 -xs 1 -bg black -fn Terminus:pixelsize=12 -geometry +0-0 
+#bind Mod1+shift+52 exec i3status -c ~/.i3/i3status.conf|dzen2 -ta r -tw 1280 -xs 0 -bg black -fn Terminus:pixelsize=12 -dock &
+
+assign Pidgin 3
+assign Transmission 4
+assign "Navigator/Mozilla Firefox" 2
+assign "Download/Downloads" 2
+
+#class        border  backgr. text
+#A client which currently has the focus.
+client.focused #4c7899 #285577 #dedede
+
+#A client which is the focused one of its container, but it does not have the focus at the moment.
+client.focused_inactive #4c7899 #555555 #dedede
+
+#A client which is not the focused one of its container.
+client.unfocused #333333 #222222 #888888
+
+#The current workspace in the bottom bar
+bar.focused #4c7899 #285577 #dedede
+
+#All other workspaces in the bottom bar
+bar.unfocused #333333 #222222 #888888

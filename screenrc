@@ -1,0 +1,36 @@
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on" 
+autodetach on
+defc1 off
+startup_message off
+vbell off
+
+#escape ^Zz
+
+bind s split
+bind S split
+bind x
+
+bindkey -k k1 select 0
+bindkey -k k2 select 1
+bindkey -k k3 select 2
+bindkey -k k4 select 3
+bindkey -k k5 select 4
+bindkey -k k6 select 5
+bindkey -k k7 select 6
+bindkey -k k8 select 7
+bindkey -k k9 select 8
+
+#shelltitle ""
+
+# This works, but not perfectly
+#caption always "%{wK}[%n]%=%{kK}%-w%{wK}%50>%?%F[%?%n %t%?%F]%?%{-}%1>%+w%1>%<"
+
+# This works perfectly, especially if using split windows.
+#caption always "%{wK}[%n]%=%{kK}%-w%{wK}%?%F[%?%n %t%?%F]%?%{-}%+w"
+#caption always "%{wK} %=%{kK}%-w%{wK}%?%F[%?%n%?%F]%?%{-}%+w"
+#hardstatus alwayslastline "%{kw} %=%C%A"
+
+#hardstatus alwayslastline "%{= dd}%-w%n %t %+w"
+caption always "%{= dK}%-w%{= dd}%?%F[%?%n %t%?%F]%?%{-}%+w"

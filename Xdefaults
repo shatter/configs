@@ -1,0 +1,75 @@
+URxvt*background:rgb:00/00/00
+URxvt*foreground:rgb:be/be/be
+
+URxvt*color0:rgb:1d/2b/3a
+URxvt*color10:rgb:c3/bf/9f
+URxvt*color11:rgb:f0/df/af
+URxvt*color12:rgb:41/86/be
+URxvt*color13:rgb:dc/8c/c3
+URxvt*color14:rgb:71/be/be
+URxvt*color15:rgb:e4/e4/e4
+URxvt*color1:rgb:d3/62/65
+URxvt*color2:rgb:60/b4/8a
+URxvt*color3:rgb:df/af/8f
+URxvt*color4:rgb:7a/7a/b0
+URxvt*color5:rgb:a9/7a/99
+URxvt*color6:rgb:06/98/9A
+URxvt*color7:rgb:be/be/be
+URxvt*color8:rgb:66/66/66
+URxvt*color9:rgb:ef/81/71
+
+URxvt*boldFont: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+URxvt*font: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+
+URxvt*scrollBar: false
+URxvt*selectToClipboard: true
+URxvt.cursorBlink: false
+URxvt.externalBorder: 0
+URxvt.internalBorder: 0
+
+Xft.antialias:true
+Xft.autohint:false
+Xft.dpi:96
+Xft.hinting:true
+Xft.hintstyle:hintslight
+Xft.lcdfilter:lcddefault
+Xft.rgba:rgb
+
+xterm*.altSendsEscape:true
+xterm*.boldColors:true
+xterm*.boldMode:false
+xterm*.borderWidth:0
+xterm*.colorBDMode:true
+xterm*.internalBorder:0
+xterm*.jumpScroll:true
+xterm*.metaSendsEscape:true
+xterm*.multiScroll:true
+xterm*.saveLines:10000
+xterm*.selectToClipboard:true
+xterm*.toolBar:false
+xterm*.utf8:1
+xterm*utf8Title:true
+
+xterm*boldFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+xterm*font:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+xterm*IconFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+
+xterm*background:rgb:00/00/00
+xterm*foreground:rgb:be/be/be
+
+xterm*color0:rgb:1d/2b/3a
+xterm*color10:rgb:c3/bf/9f
+xterm*color11:rgb:f0/df/af
+xterm*color12:rgb:41/86/be
+xterm*color13:rgb:dc/8c/c3
+xterm*color14:rgb:71/be/be
+xterm*color15:rgb:e4/e4/e4
+xterm*color1:rgb:d3/62/65
+xterm*color2:rgb:60/b4/8a
+xterm*color3:rgb:df/af/8f
+xterm*color4:rgb:7a/7a/b0
+xterm*color5:rgb:a9/7a/99
+xterm*color6:rgb:06/98/9A
+xterm*color7:rgb:be/be/be
+xterm*color8:rgb:66/66/66
+xterm*color9:rgb:ef/81/71

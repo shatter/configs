@@ -1,0 +1,7 @@
+include '/home/daniel/.themes/Test/gtk-2.0/gtkrc'
+gtk-icon-theme-name="Gnome"
+#gtk-font-name="Droid Sans 7.5"
+gtk-font-name="Aller Light 8"
+gtk-can-change-accels = 1
+gtk-toolbar-icon-size = GTK_ICON_SIZE_SMALL_TOOLBAR
+

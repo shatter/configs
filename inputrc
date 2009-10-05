@@ -1,0 +1,7 @@
+$if Bash
+	set visible-stats on
+	set page-completions off
+$endif
+
+# We still want the defaults
+$include /etc/inputrc
