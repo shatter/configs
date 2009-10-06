@@ -1,0 +1,52 @@
+# /etc/conf.d/local.start
+
+# This is a good place to load any misc programs
+# on startup (use &>/dev/null to hide output)
+
+# Tell everything to write to disk as little as possible
+echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+echo 40 > /proc/sys/vm/dirty_ratio
+echo 10 > /proc/sys/vm/dirty_background_ratio
+echo 5 > /proc/sys/vm/laptop_mode
+
+echo min_power > /sys/class/scsi_host/host0/link_power_management_policy
+echo 10 > /sys/module/snd_hda_intel/parameters/power_save
+
+# Set up "noop" as our elevator
+#echo noop > /sys/block/sda/queue/scheduler
+
+# Set up the cpufreq governor
+for i in 0 1
+do
+	#[ -w /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor ] && echo ondemand > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor
+	[ -w /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor ] && echo userspace > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor
+done
+
+# Set the sampling rate if we're using "ondemand"
+for i in 0 1
+do
+	if [[ -w /sys/devices/system/cpu/cpu${i}/cpufreq/ondemand/sampling_rate_max && /sys/devices/system/cpu/cpu${i}/cpufreq/ondemand/sampling_rate ]]; then
+		cat /sys/devices/system/cpu/cpu${i}/cpufreq/ondemand/sampling_rate_max > /sys/devices/system/cpu/cpu${i}/cpufreq/ondemand/sampling_rate
+	fi
+done
+
+# Set the speed if we're using "userspace"
+for i in 0 1
+do
+	[ -z `grep unsupported /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed` ] && echo 1200000 >> /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_setspeed
+done
+
+# Throttle CPU T-States (Seriously, don't do this)
+#for i in 0 1
+#do
+#       [ -w /proc/acpi/processor/CPU${i}/limit ] && echo -n "0:1" > /proc/acpi/processor/CPU${i}/limit
+#done
+
+# Lower the brightness 
+[ -w /sys/class/backlight/acpi_video0/brightness ] && echo 3 > /sys/class/backlight/acpi_video0/brightness
+
+# We could also do it this way
+#[ -w /proc/acpi/video/GFX0/DDo3/brightness ] && echo 30 > /proc/acpi/video/GFX0/DD03/brightness
+
+# Tell hal daemon to leave the CD drive alone
+#hal-disable-polling --device /dev/cdrom &>/dev/null
