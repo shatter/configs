@@ -18,12 +18,14 @@ URxvt*color7:rgb:be/be/be
 URxvt*color8:rgb:66/66/66
 URxvt*color9:rgb:ef/81/71
 
-URxvt*boldFont: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-URxvt*font: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+!URxvt*boldFont: xft:monospace:autohint=true:pixelsize=11.5
+!URxvt*font: xft:monospace:autohint=true:pixelsize=11.5
+
+URxvt*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+URxvt*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
 URxvt*scrollBar: false
 URxvt*selectToClipboard: true
-URxvt.cursorBlink: false
 URxvt.externalBorder: 0
 URxvt.internalBorder: 0
 
@@ -48,7 +50,7 @@ xterm*.saveLines:10000
 xterm*.selectToClipboard:true
 xterm*.toolBar:false
 xterm*.utf8:1
-xterm*utf8Title:true
+xterm*.utf8Title:true
 
 xterm*boldFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
 xterm*font:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
