@@ -35,5 +35,6 @@ while true; do
 
 # i3
 echo "$(batt) | $(cputemp) | $(date +'%x | %I:%M %p')"
+sleep 10
 done | dzen2 -ta r -bg black -fn "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1" -xs 1 -dock &
 exec /home/daniel/bin/i3-next >> ~/.i3/logfile
