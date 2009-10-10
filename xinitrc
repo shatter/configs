@@ -1,13 +1,9 @@
 export MOZ_DISABLE_PANGO=1
 export OOO_FORCE_DESKTOP="gnome"
 
-#autocutsel -selection CLIPBOARD -fork &
-#autocutsel -selection PRIMARY -fork &
-#autocutsel -s PRIMARY -buttonup -fork &
+autocutsel -selection CLIPBOARD -fork &
+autocutsel -selection PRIMARY -fork &
 #setxkbmap -option ctrl:nocaps &
-#xbindkeys &
-
-#xgamma -gamma 1.136
 
 #xrandr --output VGA1 --dpi 96 --mode 1024x768 --right-of LVDS1
 #xrandr --output LVDS1 --preferred --dpi 96 --mode 1280x800 --left-of VGA1
@@ -29,10 +25,15 @@ cputemp() {
 }
 
 while true; do
-#	xsetroot -name "$(batt) | $(cputemp) | $(date +'%x | %I:%M:%S %p')"
-	echo "$(batt) | $(cputemp) | $(date +'%x | %I:%M %p')"
-	sleep 10
+
+# dwm
+#xsetroot -name "$(batt) | $(cputemp) | $(date +'%x | %I:%M:%S %p')"
+#sleep 10
 #done &
+#xbindkeys &
 #exec /home/daniel/bin/dwm
-done | dzen2 -ta r -bg black -fn "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1" -tw 1275 -xs 1 -dock &
+
+# i3
+echo "$(batt) | $(cputemp) | $(date +'%x | %I:%M %p')"
+done | dzen2 -ta r -bg black -fn "-xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-1" -xs 1 -dock &
 exec /home/daniel/bin/i3-next >> ~/.i3/logfile
