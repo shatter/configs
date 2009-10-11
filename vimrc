@@ -5,9 +5,10 @@ filetype indent off
 filetype plugin on
 filetype plugin indent off
 
-nmap <silent> <C-t> :tabnew<CR>
-imap <silent> <C-t> <Esc>:tabnew<CR>
-
+set expandtab
+set hlsearch
+set incsearch
+set lazyredraw
 set noautoindent
 set nobackup
 set nocindent
@@ -15,19 +16,23 @@ set nocompatible
 set noexpandtab
 set nosmartindent
 set nowrap
-set tabstop=4
 set title
 
 set background=dark
+set backspace=indent,eol,start
 set cinoptions=
 set indentexpr=
 set laststatus=2
+set shiftwidth=4
 set shortmess=IatA
 set showtabline=2
-set statusline=[%n]\ %m%r%h%w\ %F\%=\[%c]\ [%l,%L]\ [%p%%]
-"set statusline=%mb%n:%f%R%Y\ %l/%L,%c:%v
+set softtabstop=4
+set statusline=[%n]\ %m%r%h%w\ %F\%=[0x%B]\ [%c]\ [%l,%L]\ [%p%%]
 set titlestring=[%n]\ %F
 set viminfo='50,<50,s10,:50,/0,h,@20,n~/.vim/viminfo
+
+nmap <silent> <C-t> :tabnew<CR>
+imap <silent> <C-t> <Esc>:tabnew<CR>
 
 nmap <silent> 1 :1tabn<CR>
 nmap <silent> 2 :2tabn<CR>
@@ -51,19 +56,20 @@ imap <silent> 8 <ESC>:8tabn<CR>a
 imap <silent> 9 <ESC>:9tabn<CR>a
 imap <silent> 0 <ESC>:0tabn<CR>a
 
+
 if (&term == 'rxvt-256color') || (&term =~ 'rxvt-unicode256') || (&term =~ 'xterm-256color') || (&term =~ '^screen-256color')
 	set t_Co=256
-	"hi StatusLine      ctermfg=232   ctermbg=250
-	"hi StatusLineNC    ctermfg=232   ctermbg=241
-	hi StatusLine      ctermfg=0   ctermbg=7 cterm=INVERSE
-	hi StatusLineNC    ctermfg=0   ctermbg=8
 endif
 
 if &term =~ "linux"
 	if has("terminfo")
 		set t_Co=16
-		let xterm16_colormap = 'default'
-		let xterm16_brightness = 'low'
-		colorscheme xterm16
 	endif
 endif
+
+if exists("syntax_on")
+    syntax reset
+endif
+
+hi StatusLine ctermfg=0 ctermbg=7 cterm=INVERSE
+hi StatusLineNC ctermfg=0 ctermbg=8
