@@ -10,6 +10,10 @@ export EDITOR=vim
 export LESSHISTFILE=-
 export PS1='[%n@%m %1~] '
 
+#eval unset ${!LC_*} LANG
+#export LANG="en_US.UTF-8"
+#export LC_COLLATE="C"
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -52,19 +56,19 @@ elif [[ "${TERM}" == "screen-bce" ]] ; then
 elif [[ "${TERM}" = "linux" ]] ; then
 	#echo -en "\e]P01e2320"
 	echo -en "\e]P0000000"
-	echo -en "\e]P8709080"
-	echo -en "\e]P1705050"
-	echo -en "\e]P9dca3a3"
+	echo -en "\e]P8666666"
+	echo -en "\e]P1d36265"
+	echo -en "\e]P9ef8171"
 	echo -en "\e]P260b48a"
 	echo -en "\e]PAc3bf9f"
 	echo -en "\e]P3dfaf8f"
 	echo -en "\e]PBf0dfaf"
-	echo -en "\e]P4506070"
-	echo -en "\e]PC94bff3"
-	echo -en "\e]P5dc8cc3"
-	echo -en "\e]PDec93d3"
-	echo -en "\e]P68cd0d3"
-	echo -en "\e]PE93e0e3"
-	#echo -en "\e]P7dedede"
-	echo -en "\e]PFdfdfdf"
+	echo -en "\e]P47a7ab0"
+	echo -en "\e]PC4186be"
+	echo -en "\e]P5a97a99"
+	echo -en "\e]PDdc8cc3"
+	echo -en "\e]P606989a"
+	echo -en "\e]PE71bebe"
+	#echo -en "\e]P7bebebe"
+	echo -en "\e]PFe4e4e4"
 fi
