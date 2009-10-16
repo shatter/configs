@@ -1,33 +1,83 @@
 URxvt*background:rgb:00/00/00
 URxvt*foreground:rgb:be/be/be
 
-URxvt*color0:rgb:1d/2b/3a
-URxvt*color10:rgb:c3/bf/9f
-URxvt*color11:rgb:f0/df/af
-URxvt*color12:rgb:41/86/be
-URxvt*color13:rgb:dc/8c/c3
-URxvt*color14:rgb:71/be/be
-URxvt*color15:rgb:e4/e4/e4
+!!URxvt*color0:rgb:1d/2b/3a
+URxvt*color0:rgb:1e/1e/27
 URxvt*color1:rgb:d3/62/65
 URxvt*color2:rgb:60/b4/8a
 URxvt*color3:rgb:df/af/8f
-URxvt*color4:rgb:7a/7a/b0
+!URxvt*color4:rgb:7a/7a/b0
 URxvt*color5:rgb:a9/7a/99
 URxvt*color6:rgb:06/98/9A
 URxvt*color7:rgb:be/be/be
-URxvt*color8:rgb:66/66/66
+!URxvt*color8:rgb:66/66/66
+URxvt*color8:rgb:1e/1e/27
 URxvt*color9:rgb:ef/81/71
+URxvt*color10:rgb:c3/bf/9f
+URxvt*color11:rgb:f0/df/af
+!URxvt*color12:rgb:41/86/be
+URxvt*color13:rgb:dc/8c/c3
+URxvt*color14:rgb:71/be/be
+URxvt*color15:rgb:de/de/de
 
-!URxvt*boldFont: xft:monospace:autohint=true:pixelsize=11.5
-!URxvt*font: xft:monospace:autohint=true:pixelsize=11.5
+!*foreground:     rgb:be/be/be
+!*background:     rgb:00/00/00
+!black
+!*color0:         rgb:1e/1e/27
+!*color8:         rgb:25/25/25
+!red
+!*color1:         rgb:80/32/32
+!*color9:         rgb:98/2b/2b
+!green
+!*color2:         rgb:5b/76/2f
+!*color10:        rgb:89/b8/3f
+!brown/yellow
+!*color3:         rgb:aa/99/43
+!*color11:        rgb:ef/ef/60
+!blue
+*color4:         rgb:32/4c/80
+*color12:        rgb:2b/4f/98
+!magenta
+!*color5:         rgb:70/6c/9a
+!*color13:        rgb:82/6a/b1
+!cyan
+!*color6:         rgb:92/b1/9e
+!*color14:        rgb:a1/cd/cd
+!white
+!*color7:         rgb:be/be/be
+!*color15:        rgb:de/de/de
 
-URxvt*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-URxvt*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+!URxvt*background: #000000
+!URxvt*foreground: #d0d0d0
+!!URxvt*color0: #2F2E2D
+!URxvt*color0: #1e1e27
+!URxvt*color8: #4A4845
+!URxvt*color1: #C37561
+!URxvt*color9: #D19485
+!URxvt*color2: #A0A57E
+!URxvt*color10: #B6B99D
+!URxvt*color3: #D1A375
+!URxvt*color11: #DEBC9C
+!URxvt*color4: #7985A3
+!URxvt*color12: #98A1B9
+!URxvt*color5: #AB716D
+!URxvt*color13: #BE918E
+!URxvt*color6: #98B9B1
+!URxvt*color14: #CBE6CB
+!URxvt*color7: #D0D0D0
+!URxvt*color15: #EFEFEF
 
+!URxvt*boldFont: xft:Inconsolata:size=10
+!URxvt*font: xft:Inconsolata:size=10
+!URxvt*boldFont: xft:Monaco:size=8
+!URxvt*font: xft:Monaco:size=8
+
+URxvt*boldFont: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*-1
+URxvt*font: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*-1
+URxvt*borderWidth: 0
 URxvt*scrollBar: false
-URxvt*selectToClipboard: true
-URxvt.externalBorder: 0
-URxvt.internalBorder: 0
+URxvt*externalBorder: 0
+URxvt*internalBorder: 0
 
 Xft.antialias:true
 Xft.autohint:false
@@ -38,28 +88,32 @@ Xft.lcdfilter:lcddefault
 Xft.rgba:rgb
 
 xterm*.altSendsEscape:true
-xterm*.boldColors:true
 xterm*.boldMode:false
 xterm*.borderWidth:0
 xterm*.colorBDMode:true
+xterm*.iconBorderWidth: 0
 xterm*.internalBorder:0
 xterm*.jumpScroll:true
 xterm*.metaSendsEscape:true
 xterm*.multiScroll:true
 xterm*.saveLines:10000
+xterm*.scrollBarBorder: 0
 xterm*.selectToClipboard:true
 xterm*.toolBar:false
 xterm*.utf8:1
 xterm*.utf8Title:true
 
-xterm*boldFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-xterm*font:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-xterm*IconFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+!xterm*boldFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+!xterm*font:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+!xterm*IconFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
+xterm*.FaceName: Monaco:autohint=true
+xterm*.FaceSize: 8.5
 
 xterm*background:rgb:00/00/00
 xterm*foreground:rgb:be/be/be
 
-xterm*color0:rgb:1d/2b/3a
+xterm*colorBD:rgb:e4/e4/e4
+xterm*color0:rgb:1e/1e/27
 xterm*color10:rgb:c3/bf/9f
 xterm*color11:rgb:f0/df/af
 xterm*color12:rgb:41/86/be
@@ -73,5 +127,24 @@ xterm*color4:rgb:7a/7a/b0
 xterm*color5:rgb:a9/7a/99
 xterm*color6:rgb:06/98/9A
 xterm*color7:rgb:be/be/be
-xterm*color8:rgb:66/66/66
+xterm*color8:rgb:1e/1e/27
 xterm*color9:rgb:ef/81/71
+
+!xterm*background: #000000
+!xterm*foreground: #d0d0d0
+!xterm*color0: #2F2E2D
+!xterm*color8: #4A4845
+!xterm*color1: #C37561
+!xterm*color9: #D19485
+!xterm*color2: #A0A57E
+!xterm*color10: #B6B99D
+!xterm*color3: #D1A375
+!xterm*color11: #DEBC9C
+!xterm*color4: #7985A3
+!xterm*color12: #98A1B9
+!xterm*color5: #AB716D
+!xterm*color13: #BE918E
+!xterm*color6: #98B9B1
+!xterm*color14: #CBE6CB
+!xterm*color7: #D0D0D0
+!xterm*color15: #EFEFEF

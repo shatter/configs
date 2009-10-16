@@ -6,11 +6,42 @@ defc1 off
 startup_message off
 vbell off
 
+backtick 1 60 60 $HOME/bin/battery.sh
+backtick 2 60 60 $HOME/bin/cputemp.sh
 #escape ^Zz
 
+#screen    -t '' 1 
+#screen    -t '' 2 
+#screen    -t '' 3 
+#screen    -t '' 4 
+#screen    -t '' 5 
+#screen    -t '' 6 
+#screen    -t '' 7
+#screen    -t '' 8
+#screen    -t '' 9
+#select 9
+
+# Ctrl-a A lets you rename a window
+
 bind s split
+bind ^s split
 bind S split
-bind x
+bind ^S split
+
+# xterm scrolling
+termcapinfo xterm* ti@:te@
+bindkey -m "^[[5;2~" stuff ^b
+bindkey -m "^[[6;2~" stuff ^f
+
+# urxvt scrolling
+#termcapinfo rxvt-unicode ti@:te@
+#bindkey "^[[5;2~" eval "copy" "stuff ^u"
+#bindkey -m "^[[5;2~" stuff ^u
+#bindkey -m "^[[6;2~" stuff ^d
+
+# Make Ctrl-Left/Right select windows
+bindkey "^[Od" prev
+bindkey "^[Oc" next
 
 bindkey -k k1 select 0
 bindkey -k k2 select 1
@@ -24,13 +55,6 @@ bindkey -k k9 select 8
 
 #shelltitle ""
 
-# This works, but not perfectly
-#caption always "%{wK}[%n]%=%{kK}%-w%{wK}%50>%?%F[%?%n %t%?%F]%?%{-}%1>%+w%1>%<"
+#caption always "%{= dK}%-w%{= dd}%?%F[%?%n %t%?%F]%?%{-}%+w"
+caption always "%{= dk}%-w%{= dW}%n %t%{-}%+w %-= %1` | %2` | %c"
 
-# This works perfectly, especially if using split windows.
-#caption always "%{wK}[%n]%=%{kK}%-w%{wK}%?%F[%?%n %t%?%F]%?%{-}%+w"
-#caption always "%{wK} %=%{kK}%-w%{wK}%?%F[%?%n%?%F]%?%{-}%+w"
-#hardstatus alwayslastline "%{kw} %=%C%A"
-
-#hardstatus alwayslastline "%{= dd}%-w%n %t %+w"
-caption always "%{= dK}%-w%{= dd}%?%F[%?%n %t%?%F]%?%{-}%+w"

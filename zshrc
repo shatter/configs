@@ -56,7 +56,7 @@ elif [[ "${TERM}" == "screen-bce" ]] ; then
 elif [[ "${TERM}" = "linux" ]] ; then
 	#echo -en "\e]P01e2320"
 	echo -en "\e]P0000000"
-	echo -en "\e]P8666666"
+	echo -en "\e]P81e1e27"
 	echo -en "\e]P1d36265"
 	echo -en "\e]P9ef8171"
 	echo -en "\e]P260b48a"
