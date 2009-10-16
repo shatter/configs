@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Needs pdftohtml
 NOARGS=0
 
 if [ $# = $NOARGS ]; then
@@ -7,19 +9,19 @@ if [ $# = $NOARGS ]; then
 fi
 
 if [ -d ~/tmp ]; then
-    echo "tmp directory exists hmmm....."
+    echo "Using ~/tmp"
 else
     mkdir ~/tmp
 fi
 
-echo "converting pdf to html"
+echo "Converting, stand by"
 z=$(expr substr "$*" 1 1)
 #echo $z
 
 if [ "$z" = "/" ]; then
     file=$*
 else
-    file=`pwd`/$*
+    file=$(pwd)/$*
 fi
 
 if ! [ -e "$file" ]; then
@@ -31,10 +33,10 @@ cd ~/tmp
 pdftohtml -q "$file" temp.html
 
 if [ -e ~/tmp/temp.html ]; then
-    echo "opening files"
+    echo "Opening"
     elinks ~/tmp/temp.html
     rm temp.html temps.html temp_ind.html
 else
-    echo "The file cannot be converted"
+    echo "Cannot convert"
     exit
 fi
