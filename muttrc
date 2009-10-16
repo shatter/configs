@@ -1,110 +1,86 @@
-# .muttrc
-# working gmail IMAP
-
-bind compose y send-message
-bind editor <space> noop
-bind index a tag-prefix
-bind index c mail
-bind index l change-folder
-bind index ' ' next-page
-bind index n next-undeleted
-bind index p previous-undeleted
-bind index $ sort-mailbox
-bind index \; tag-entry
-bind index v display-message
-bind index w search
-bind index x sync-mailbox
-bind index y print-message
-
-bind pager c mail
-bind pager <down> next-line
-bind pager l change-folder
-bind pager ' ' next-page
-bind pager n next-undeleted
-bind pager \n noop
-bind pager p previous-undeleted
-bind pager <up> previous-line
-bind pager w search
-
-# variation of ubiquitous "zenburn" colorscheme
-color attachment color174 color237
-color body       color115 color236 "^gpg: BAD signature.*"
-color body       color174 color237 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
-color body       color174 color237 "^-----BEGIN PGP SIGNATURE-----"
-color body       color174 color237 "^-----BEGIN PGP SIGNED MESSAGE-----"
-color body       color174 color237 "^Comment: .*"
-color body       color174 color237 "^-----END PGP SIGNATURE-----"
-color body       color174 color237 "^-----END PGP SIGNED MESSAGE-----"
-color body       color174 color237 "(finger|ftp|http|https|news|telnet)://[^ >]*"
-color body       color174 color237 "^gpg: Can't check signature.*"
-color body       color174 color237 "mailto: *[^ ]+\(\\i?subject=[^ ]+\)?"
-color body       color174 color237 "<URL:[^ ]*>"
-color body       color174 color237 "^Version: GnuPG.*"
-color body       color174 color237 "www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
-color body       color188 color237 "^gpg: Good signature.*"
-color error      color115 color236
-color hdrdefault color247 color237
-color header     color247 color237 "^Subject"
-color index      color174 color237 ~D
-color index      color174 color237 ~F
-color index      color188 color237 ~A
-color index      color188 color237 ~N
-color index      color188 color237 ~O
-color indicator  color247 color235
-color markers    color142 color238
-color normal     color188 color237
-color quoted1    color116 color237
-color quoted2    color247 color237
-color quoted3    color108 color237
-color quoted4    color116 color237
-color quoted5    color247 color237
-color quoted6    color108 color237
-color quoted7    color116 color237
-color quoted8    color247 color237
-color quoted9    color108 color237
-color quoted     color108 color237
-color signature  color223 color237
-color status     color247 color235
-color tilde      color108 color237
-color tree       color109 color237
-
-hdr_order Date From To Cc
-
-ignore *
-ignore "Authentication-Results:"
-ignore "DKIM-Signature:"
-ignore "DomainKey-Signature:"
-
-macro index ga "<change-folder> =[Gmail]/All Mail<enter>" "Go to all mail"
-macro index gd "<change-folder> =[Gmail]/Drafts<enter>" "Go to drafts"
-macro index gi "<change-folder> =INBOX<enter>" "Go to inbox"
-macro index gs "<change-folder> =[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
-macro index z l~T\r
-
-set certificate_file =~/.mutt/certificates
-set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp"'
-set folder=$HOME/.mutt/maildir
-set folder = "imaps://imap.gmail.com:993"
 set from = "USERNAME@gmail.com"
-set header_cache =~/.mutt/cache/headers
-set imap_keepalive = 900
-set imap_pass = "PASSWORD"
+set realname = "My Name"
+
 set imap_user = "USERNAME@gmail.com"
-set markers=no
-set mbox=$HOME/mail/inbox
+set imap_pass = "PASSWORD"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Gmail]/Drafts"
+
+set header_cache =~/.mutt/cache/headers
 set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+set smtp_url = "smtp://USERNAME@smtp.gmail.com:587/"
+set smtp_pass = "PASSWORD"
+
+#bind editor <space> noop
+#bind browser <return> view-file
+
 set move = no
 set narrow_tree = yes
-set pager_index_lines= 5
-set postponed ="+[Gmail]/Drafts"
-set realname = "Your Name"
-set record=$HOME/.mutt/maildir-sent
-set smtp_pass = "PASSWORD"
-set smtp_url = "smtp://USERNAME@smtp.gmail.com:587/"
-set sort_aux = 'last-date-received'
-set sort = 'threads'
-set spoolfile = "+INBOX"
+set imap_keepalive = 900
 
+mailboxes ! "=[Gmail]/Drafts" "=[Gmail]/All Mail" "=exherbo" "=social" "=notes"
+
+bind editor <space> noop
+macro index gi "<change-folder> =INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder> =[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder> =[Gmail]/Sent Mail<enter>" "Go to starred messages"
+macro index gd "<change-folder> =[Gmail]/Drafts<enter>" "Go to drafts"
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+
+bind editor <space> noop
+
+ignore *
 unignore from: date subject to cc
-unignore x-mailer:
 unignore x-mailing-list: posted-to:
+unignore x-mailer:
+
+set markers=no
+set pager_index_lines= 5
+#set sort = 'threads'
+set sort_aux = 'last-date-received'
+
+set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp"'
+
+#set folder=$HOME/.mutt/maildir
+#set mbox=$HOME/mail/inbox
+#set record=$HOME/.mutt/maildir-sent
+
+bind index v display-message
+bind index p previous-undeleted
+bind index n next-undeleted
+bind index ' ' next-page
+bind index c mail
+bind index l change-folder
+bind index w search
+bind index y print-message
+bind index x sync-mailbox
+bind index $ sort-mailbox
+bind index a tag-prefix
+bind index \; tag-entry
+
+macro index z l~T\r
+
+bind pager p previous-undeleted
+bind pager n next-undeleted
+bind pager ' ' next-page
+bind pager l change-folder
+bind pager c mail
+bind pager w search
+bind pager \n noop
+bind pager <up> previous-line
+bind pager <down> next-line
+bind compose y send-message
+
+color normal white default
+#color indicator brightblue white
+#color status blue white
+#color indicator brightblue brightblack
+color indicator white brightblack
+color status white brightblack
