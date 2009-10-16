@@ -56,5 +56,5 @@ bindkey -k k9 select 8
 #shelltitle ""
 
 #caption always "%{= dK}%-w%{= dd}%?%F[%?%n %t%?%F]%?%{-}%+w"
-caption always "%{= dk}%-w%{= dW}%n %t%{-}%+w %-= %1` | %2` | %c"
+caption always "%{= dB}%-w%{= dW}%n %t%{-}%+w %-= %1` | %2` | %c"
 
