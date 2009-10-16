@@ -1,0 +1,40 @@
+#!/bin/sh
+NOARGS=0
+
+if [ $# = $NOARGS ]; then
+    echo "usage :- pdfview filename.pdf"
+    exit
+fi
+
+if [ -d ~/tmp ]; then
+    echo "tmp directory exists hmmm....."
+else
+    mkdir ~/tmp
+fi
+
+echo "converting pdf to html"
+z=$(expr substr "$*" 1 1)
+#echo $z
+
+if [ "$z" = "/" ]; then
+    file=$*
+else
+    file=`pwd`/$*
+fi
+
+if ! [ -e "$file" ]; then
+    echo "File not found"
+    exit
+fi
+
+cd ~/tmp
+pdftohtml -q "$file" temp.html
+
+if [ -e ~/tmp/temp.html ]; then
+    echo "opening files"
+    elinks ~/tmp/temp.html
+    rm temp.html temps.html temp_ind.html
+else
+    echo "The file cannot be converted"
+    exit
+fi
