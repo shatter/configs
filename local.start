@@ -7,7 +7,6 @@
 #echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
 #echo 40 > /proc/sys/vm/dirty_ratio
 #echo 10 > /proc/sys/vm/dirty_background_ratio
-#echo 5 > /proc/sys/vm/laptop_mode
 
 echo 60 > /proc/sys/vm/dirty_background_ratio
 echo 0 > /proc/sys/vm/dirty_expire_centisecs
@@ -43,4 +42,4 @@ done
 #[ -w /proc/acpi/video/GFX0/DDo3/brightness ] && echo 30 > /proc/acpi/video/GFX0/DD03/brightness
 
 # Tell hal daemon to leave the CD drive alone
-#hal-disable-polling --device /dev/cdrom &>/dev/null
+hal-disable-polling --device /dev/cdrom &>/dev/null
