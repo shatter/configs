@@ -1,126 +1,70 @@
 URxvt*background:#000000
-URxvt*foreground:#999999
-!BRIGHTEST
-!NCS 0580 / NCS 2580
+URxvt*foreground:#C1C1C1
 !black
 URxvt*color0: #000000
 URxvt*color8: #17171A
-!red
-URxvt*color1: #991F1F
-URxvt*color9: #BF2626
-!green
-URxvt*color2: #1F991F
-URxvt*color10: #26BF26
-!yellow
-URxvt*color3: #99991F
-URxvt*color11: #BFBF26
-!blue
-URxvt*color4: #1F1F99
-URxvt*color12: #2626BF
-!magenta
-URxvt*color5: #991F99
-URxvt*color13: #BF26BF
-!cyan
-URxvt*color6: #1F9999
-URxvt*color14: #26BFBF
+!red (4070-R10B / 2570-R10B)
+URxvt*color1: #992E43
+URxvt*color9: #BF3954
+!green (4070-G10Y / 2570-G10Y)
+URxvt*color2: #39992E
+URxvt*color10: #47BF39
+!yellow (4070-Y10R / 2570-Y10R)
+URxvt*color3: #998E2E
+URxvt*color11: #BFB239
+!blue (2570-B / 4070-B)
+URxvt*color4: #2E2E99
+URxvt*color12: #3939BF
+!magenta (4070-R60B / 2570-R60B)
+URxvt*color5: #842E99
+URxvt*color13: #A439BF
+!cyan (4070-B50G / 2570-B50G)
+URxvt*color6: #2E9999
+URxvt*color14: #39BFBF
 !white
-URxvt*color7: #999999
-URxvt*color15: #E5E5E5
-
-!!LIGHTER DEFAULT
-!!NCS 2080 / NCS 5080
-!!black
-!URxvt*color0:#1A1A1A
-!URxvt*color8:#666666
-!!red
-!URxvt*color1:#801919
-!URxvt*color9:#CC2929
-!!green
-!URxvt*color2:#198019
-!URxvt*color10:#29CC29
-!!yellow
-!URxvt*color3:#808019
-!URxvt*color11:#CCCC29
-!!blue
-!URxvt*color4:#191980
-!URxvt*color12:#2929CC
-!!magenta
-!URxvt*color5:#801980
-!URxvt*color13:#CC29CC
-!!cyan
-!URxvt*color6:#198080
-!URxvt*color14:#29CCCC
-!!white
-!URxvt*color7:#B3B3B3
-!URxvt*color15:#E5E5E5
-
-!!DEFAULT
-!!NCS 4070 / NCS 5570
-!!black
-!URxvt*color0:#1A1A1A
-!URxvt*color8:#666666
-!!red
-!URxvt*color1:#732222
-!URxvt*color9:#992E2E
-!!green
-!URxvt*color2:#227322
-!URxvt*color10:#2E992E
-!!yellow
-!URxvt*color3:#737322
-!URxvt*color11:#99992E
-!!blue
-!URxvt*color4:#222273
-!URxvt*color12:#2E2E99
-!!magenta
-!URxvt*color5:#732273
-!URxvt*color13:#992E99
-!!cyan
-!URxvt*color6:#227373
-!URxvt*color14:#2E9999
-!!white
-!URxvt*color7:#B3B3B3
-!URxvt*color15:#E5E5E5
+URxvt*color7: #C1C1C1
+URxvt*color15: #E4E4E4
 
 !OLD COLORS
 !URxvt*background:rgb:00/00/00
 !URxvt*foreground:rgb:be/be/be
+!!black
 !URxvt*color0:rgb:1e/1e/27
-!URxvt*color1:rgb:d3/62/65
-!URxvt*color2:rgb:60/b4/8a
-!URxvt*color3:rgb:df/af/8f
-!URxvt*color4:rgb:32/4c/80
-!URxvt*color5:rgb:a9/7a/99
-!URxvt*color6:rgb:06/98/9A
-!URxvt*color7:rgb:be/be/be
-!URxvt*color8:rgb:66/66/66
 !URxvt*color8:rgb:1e/1e/27
+!!red
+!URxvt*color1:rgb:d3/62/65
 !URxvt*color9:rgb:ef/81/71
+!!green
+!URxvt*color2:rgb:60/b4/8a
 !URxvt*color10:rgb:c3/bf/9f
+!!yellow
+!URxvt*color3:rgb:df/af/8f
 !URxvt*color11:rgb:f0/df/af
+!!blue
+!URxvt*color4:rgb:32/4c/80
 !URxvt*color12:rgb:2b/4f/98
+!!magenta
+!URxvt*color5:rgb:a9/7a/99
 !URxvt*color13:rgb:dc/8c/c3
+!!cyan
+!URxvt*color6:rgb:06/98/9A
 !URxvt*color14:rgb:71/be/be
+!!white
+!URxvt*color7:rgb:be/be/be
 !URxvt*color15:rgb:de/de/de
-!URxvt*boldFont: xft:Inconsolata:size=10.5
-!URxvt*font: xft:Inconsolata:size=10.5
-URxvt*boldFont: xft:Terminus:autohint=true:pixelsize=14
-URxvt*font: xft:Terminus:autohint=true:pixelsize=14
-!URxvt*boldFont: xft:Monaco:size=8
-!URxvt*font: xft:Monaco:size=8
 
-!URxvt*boldFont: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*-1
-!URxvt*font: -xos4-terminus-medium-r-normal--14-*-72-72-c-80-*-1
-
-!URxvt*boldFont: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
-!URxvt*font: -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+URxvt*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+URxvt*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
 URxvt*borderWidth: 0
+URxvt*depth:24
 URxvt*externalBorder: 0
 URxvt*internalBorder: 0
+URxvt*loginShell: true
 URxvt.matcher.button: 1
-URxvt.perl-ext: default,matcher
+URxvt.perl-ext: default,matcher,clipboard
 URxvt*scrollBar: false
-URxvt.urlLauncher: /usr/bin/firefox &>/dev/null
+URxvt.urlLauncher: /usr/bin/firefox
 
 Xft.antialias:true
 Xft.autohint:false
@@ -129,6 +73,37 @@ Xft.hinting:true
 Xft.hintstyle:hintslight
 Xft.lcdfilter:lcddefault
 Xft.rgba:rgb
+
+xterm*background:#000000
+xterm*foreground:#C1C1C1
+!black
+xterm*color0: #000000
+xterm*color8: #17171A
+!red (4070-R10B / 2570-R10B)
+xterm*color1: #992E43
+xterm*color9: #BF3954
+!green (4070-G10Y / 2570-G10Y)
+xterm*color2: #39992E
+xterm*color10: #47BF39
+!yellow (4070-Y10R / 2570-Y10R)
+xterm*color3: #998E2E
+xterm*color11: #BFB239
+!blue (2570-B / 4070-B)
+xterm*color4: #2E2E99
+xterm*color12: #3939BF
+!magenta (4070-R60B / 2570-R60B)
+xterm*color5: #842E99
+xterm*color13: #A439BF
+!cyan (4070-B50G / 2570-B50G)
+xterm*color6: #2E9999
+xterm*color14: #39BFBF
+!white
+xterm*color7: #C1C1C1
+xterm*color15: #E4E4E4
+
+xterm*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+xterm*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+xterm*iconFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
 
 xterm*.altSendsEscape:true
 xterm*.boldMode:false
@@ -145,30 +120,3 @@ xterm*.selectToClipboard:true
 xterm*.toolBar:false
 xterm*.utf8:1
 xterm*.utf8Title:true
-
-!xterm*boldFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-!xterm*font:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-!xterm*IconFont:-xos4-terminus-medium-r-normal--14-*-72-72-c-80-*
-xterm*.FaceName: Monaco:autohint=true
-xterm*.FaceSize: 8.5
-
-xterm*background:rgb:00/00/00
-xterm*foreground:rgb:be/be/be
-
-xterm*colorBD:rgb:e4/e4/e4
-xterm*color0:rgb:1e/1e/27
-xterm*color10:rgb:c3/bf/9f
-xterm*color11:rgb:f0/df/af
-xterm*color12:rgb:41/86/be
-xterm*color13:rgb:dc/8c/c3
-xterm*color14:rgb:71/be/be
-xterm*color15:rgb:e4/e4/e4
-xterm*color1:rgb:d3/62/65
-xterm*color2:rgb:60/b4/8a
-xterm*color3:rgb:df/af/8f
-xterm*color4:rgb:7a/7a/b0
-xterm*color5:rgb:a9/7a/99
-xterm*color6:rgb:06/98/9A
-xterm*color7:rgb:be/be/be
-xterm*color8:rgb:1e/1e/27
-xterm*color9:rgb:ef/81/71
