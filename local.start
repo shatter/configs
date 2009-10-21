@@ -30,10 +30,18 @@ echo noop > /sys/block/sda/queue/scheduler
 # Set up the cpufreq governor
 for i in 0 1
 do
+    # currently "userspace"
     [ -w /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor ] && echo userspace > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor
     [ -w /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed ] && echo 1200000 >> /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_setspeed
+    # maybe "ondemand" but usually not
+    #[ -w /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor ] && echo ondemand > /sys/devices/system/cpu/cpu${i}/cpufreq/scaling_governor
 done
 
+# Lower CPU voltage if we're using a patched kernel
+for i in 0 1
+do      
+	[ -w /sys/devices/system/cpu/cpu${i}/cpufreq/phc_controls ] && echo "10:23 8:23 6:23 136:23" > /sys/devices/system/cpu/cpu${i}/cpufreq/phc_controls
+done
 
 # Lower the brightness 
 [ -w /sys/class/backlight/acpi_video0/brightness ] && echo 3 > /sys/class/backlight/acpi_video0/brightness
@@ -42,4 +50,4 @@ done
 #[ -w /proc/acpi/video/GFX0/DDo3/brightness ] && echo 30 > /proc/acpi/video/GFX0/DD03/brightness
 
 # Tell hal daemon to leave the CD drive alone
-hal-disable-polling --device /dev/cdrom &>/dev/null
+#hal-disable-polling --device /dev/cdrom &>/dev/null
