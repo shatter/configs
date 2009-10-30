@@ -1,8 +1,9 @@
+!URxvt*background:#1e1e27
 URxvt*background:#000000
 URxvt*foreground:#C1C1C1
 !black
 URxvt*color0: #000000
-URxvt*color8: #17171A
+!URxvt*color8: #17171A
 !red (4070-R10B / 2570-R10B)
 URxvt*color1: #992E43
 URxvt*color9: #BF3954
@@ -53,8 +54,8 @@ URxvt*color15: #E4E4E4
 !URxvt*color7:rgb:be/be/be
 !URxvt*color15:rgb:de/de/de
 
-URxvt*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-URxvt*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
+URxvt*boldFont: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
+URxvt*font: -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
 
 URxvt*borderWidth: 0
 URxvt*depth:24
@@ -64,7 +65,8 @@ URxvt*loginShell: true
 URxvt.matcher.button: 1
 URxvt.perl-ext: default,matcher,clipboard
 URxvt*scrollBar: false
-URxvt.urlLauncher: /usr/bin/firefox
+!URxvt.urlLauncher: /usr/bin/firefox
+URxvt.urlLauncher: /usr/bin/chromium
 
 Xft.antialias:true
 Xft.autohint:false
